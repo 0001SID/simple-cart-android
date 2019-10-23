@@ -1,0 +1,20 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#263238</item>
+        <item name="colorPrimaryDark">@android:color/background_dark</item>
+
+<!--        This color will show in checkbox or text boxes-->
+        <item name="colorAccent">@android:color/background_dark</item>
+        <item name="android:textColorPrimary">@android:color/white</item>
+        <item name="colorButtonNormal">#37474f</item>
+    </style>
+    
+    <style name="extraSummaryText">
+        <item name = "android:textSize">25sp</item>
+        <item name = "android:visibility">gone</item>
+    </style>
+
+</resources>

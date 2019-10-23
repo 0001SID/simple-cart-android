@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:text="Your Food Cart"
+                android:textAllCaps="true"
+                android:textColor="@android:color/black"
+                android:textSize="30sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="80dp"
+                    android:layout_weight="0.5"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.4"
+                        android:orientation="vertical">
+
+                        <CheckBox
+                            android:id="@+id/cheesCheckBox"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="cheesClick"
+                            android:text="Extra chees" />
+
+                        <CheckBox
+                            android:id="@+id/butterCheckBox"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="butterClick"
+                            android:text="Extra Butter" />
+
+                        <CheckBox
+                            android:id="@+id/chickenCheckBox"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="chickenClick"
+                            android:text="Extra Chicken" />
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginHorizontal="10dp"
+                        android:background="@android:color/black" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <Button
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.3"
+                                android:onClick="decrement"
+                                android:text="-"
+                                android:textSize="25sp" />
+
+                            <TextView
+                                android:id="@+id/quantity"
+                                android:layout_width="50dp"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal"
+                                android:text="1"
+                                android:textSize="25sp" />
+
+                            <Button
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.3"
+                                android:onClick="increment"
+                                android:text="+"
+                                android:textSize="25sp" />
+
+
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="25dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Chicken Biriani"
+                                android:textSize="25sp"
+                                android:textStyle="bold" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Rs. "
+                                    android:textSize="25sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/chickenPrice"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="500"
+                                    android:textSize="25sp"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_weight="0.5"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.6"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/cheesTextView"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Extra Chees Rs. 100"
+                                style = "@style/extraSummaryText" />
+
+                            <TextView
+                                android:id="@+id/butterTextView"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Extra Butter Rs. 150"
+                                android:textSize="25sp"
+                                android:visibility="gone" />
+
+                            <TextView
+                                android:id="@+id/chickenTextView"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Extra Chicken Rs. 300"
+                                android:textSize="25sp"
+                                android:visibility="gone" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="20dp"
+                                android:orientation="horizontal">
+
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Total Price: "
+                                    android:textSize="25sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/totalPrice"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="500"
+                                    android:textSize="25sp"
+                                    android:textStyle="bold" />
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="20dp"
+                            android:text="Order"
+                            android:textAllCaps="true"
+                            android:textSize="25sp"
+                            android:textStyle="bold"
+                            android:onClick="submitOrder"/>
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+
+
+    </ScrollView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
